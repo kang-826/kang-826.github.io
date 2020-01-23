@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>book site</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+-->
+
+
+</head>
+<style>
+    header {
+        padding: 60px;
+        text-align: center;
+    }
+
+    .logo {
+        width: 500px;
+        vertical-align: middle;
+        height: auto;
+        max-width: 100%;
+        padding: .25rem 1rem .25rem 0;
+        margin-top: -.75rem;
+        text-align: center;
+    }
+
+    nav.navbar {
+        background-color: #35938b;
+        border: none;
+        font-size: 18px;
+        position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+        z-index: 10000;
+    
+    }
+
+    nav a {
+        color: white;
+    }
+
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 90px;
+        margin-right: 30px;
+    }
+
+    /*left side*/
+    .side {
+        flex: 25%;
+        background-color: #f1f1f1;
+        padding: 20px;
+    }
+
+    /*main*/
+    .main {
+        flex: 75%;
+        background-color: white;
+
+    }
+
+    .sidemenu {
+        height: auto;
+        padding: 20px;
+        margin-bottom: 5px;
+
+    }
+
+    footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #35938b;
+    }
+
+    .listA .container {
+        display: flex;
+        max-width: 1000px;
+        margin: 30px auto;
+        flex-wrap: wrap;
+    }
+
+    .listA article {
+        flex: 1 1 300px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .listA a {
+
+        display: block;
+        text-align: center;
+        border: 1px solid #ddd;
+        text-decoration: none;
+        color: inherit;
+        margin-bottom: 20px;
+
+    }
+
+    .listA a:hover {
+        opacity: 0.8;
+    }
+
+    .listA .photo {
+        min-height: 300px;
+        max-width: 250px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .listA h2 {
+        font-size: 15px;
+    }
+
+    .listA p {
+        font-size: 13px;
+        opacity: 0.8
+    }
+
+    .listA .text {
+        margin: 0px;
+    }
+
+    .listB article {
+        display: flex;
+        margin-top: 40px;
+    }
+
+    .listB .photo1 {
+        min-height: 300px;
+        max-width: 200px;
+        background-size: cover;
+        background-position: center;
+        flex: 25%;
+        margin-right: 40px;
+    }
+
+    .listB .text {
+        flex: 75%;
+        font-size: 15px;
+    }
+
+    .listC article {
+        display: flex;
+        margin-top: 40px;
+    }
+
+    .listC .viedo {
+        flex: 25%;
+
+    }
+
+    .listC .text {
+        flex: 75%;
+        font-size: 15px;
+        margin-left: 30px;
+
+    }
+
+    .listC .reverse {
+        display: flex;
+        flex-direction: row-reverse
+    }
+
+    .revers .video {
+        margin-right: 20px;
+    }
+
+    .reverse .text1 {
+        padding: 5px;
+    }
+
+   
+    .btn {
+        background-color: #35938b;
+        color: white;
+    }
+
+    .mainimg {
+        float: left;
+    }
+
+    .a {
+        color: #35938b;
+    }
+
+    footer {
+        background-color: #35938b;
+        color: #fff;
+    }
+
+    footer .container {
+        padding: 40px 20px;
+    }
+
+    @media(min-width: 768px) {
+        footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .footB {
+            flex: 0 0 60%;
+        }
+
+        .footC {
+            flex: 0 0 100%;
+        }
+    }
+
+    .footB div {
+        margin-bottom: 20px
+    }
+
+    .footB h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        border-bottom: 1px solid currentColor;
+        font-size: 14px
+    }
+
+    .footB ul {
+        margin: 0;
+        padding: 0;
+        list-style: none
+    }
+
+    .footB a {
+        display: block;
+        padding: 5px;
+        color: inherit;
+        font-size: 12px;
+        text-decoration: none;
+    }
+
+    .footB a:hover {
+        background-color: rgba(0, 0, 0, 0.3)
+    }
+
+    @media(min-width: 768px) {
+        .footB {
+            display: flex;
+        }
+
+        .footB div {
+            flex: 1
+        }
+
+        .footB div:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+
+    .footC {
+        font-size: 12px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .footD {
+        margin-top: 20px
+    }
+
+    .footD ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none
+    }
+
+    .footD a {
+        display: block;
+        margin-right: 8px;
+        padding: 0;
+        color: inherit;
+        font-size: 16px;
+        text-decoration: none;
+        border: 1px solid currentColor;
+        width: 2em;
+        line-height: 2em;
+        text-align: center;
+        border-radius: 50%
+    }
+
+    .footD a:hover {
+        background-color: rgba(0, 0, 0, 0.3)
+    }
+
+    .sidemenu li {
+        list-style: none;
+    }
+
+    .sidemenu a {
+        color: black;
+    }
+    .sidemenu{
+        margin-left: 30px;
+    }
+
+        .btn1 {
+            color: white;
+            padding: 14px;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            background-color: white;
+            border-radius: 7px;
+            margin-left: 0px;
+        }
+
+        .LoginBox-header {
+            font-size: 30px;
+            color: #363636;
+            display: inline-block;
+        
+            padding-right: 12px;
+            border-right: 1px solid #d7d7d7;
+        }
+
+        .submit {
+            background-color: #35938B;
+            box-sizing: border-box;
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+            border: 0;
+
+        }
+
+        .submit:hover {
+            opacity: 0.9;
+        }
+
+        #divLogin {
+            background-color: #efefef;
+            padding: 20px;
+            width: 400px;
+            margin: auto
+        }
+
+        .LoginBox-headerArea {
+            display: inline-block;
+            padding-right: 12px;
+            padding-bottom: 12px;
+            margin: 10px
+        }
+
+        .LoginBox-tab {
+            padding-left: 2px;
+            margin: 0;
+            display: inline-block;
+        }
+
+        
+
+        .LoginBox-textBox {
+            width: 100%;
+            border: 1px solid #d7d7d7;
+            font-size: 14px;
+            display: block;
+            padding: 12px !important
+        }
+
+        .Checkbox {
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+            padding-left: 2rem;
+            display: inline-block;
+        }
+
+        .LoginBox-staySignedInText {
+            color: #363636;
+            font-size: 12px;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+        .Checkbox-state {
+            position: absolute;
+            top: 50%;
+            width: 1rem;
+            height: 1rem;
+            margin-top: -0.5rem;
+            border: 1px solid #ddd;
+            border-top-color: rgb(221, 221, 221);
+            border-top-style: solid;
+            border-top-width: 1px;
+            border-right-color: rgb(221, 221, 221);
+            border-right-style: solid;
+            border-right-width: 1px;
+            border-bottom-color: rgb(221, 221, 221);
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            border-left-color: rgb(221, 221, 221);
+            border-left-style: solid;
+            border-left-width: 1px;
+            border-image-source: initial;
+            border-image-slice: initial;
+            border-image-width: initial;
+            border-image-outset: initial;
+            border-image-repeat: initial;
+            left: 0;
+            background: #fff;
+        }
+
+        .Checkbox input:checked~.Checkbox-state {
+            background: 0 0;
+            background-image: initial;
+            
+            background-size: initial;
+            
+            background-attachment: initial;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: initial;
+            transition: transform .35s ease, -webkit-transform .35s ease;
+            transform: rotate(45deg);
+            border: 2px solid #35938b;
+            border-top-color: initial;
+            border-top-style: none;
+            border-top-width: initial;
+            border-right-color: rgb(53, 147, 139);
+            border-right-style: solid;
+            border-right-width: 2px;
+            border-bottom-color: rgb(53, 147, 139);
+            border-bottom-style: solid;
+            border-bottom-width: 2px;
+            border-left-color: initial;
+            border-left-style: none;
+            border-left-width: initial;
+            border-image-source: initial;
+            border-image-slice: initial;
+            border-image-width: initial;
+            border-image-outset: initial;
+            border-image-repeat: initial;
+            border-top: none;
+            border-top-width: initial;
+            border-top-style: none;
+            border-top-color: initial;
+            border-left: none;
+            border-left-width: initial;
+            border-left-style: none;
+            border-left-color: initial;
+            height: 1.25rem;
+            width: .625rem;
+            margin-left: .25rem;
+            margin-top: -.875rem;
+        }
+    .LoginBox {
+            
+            color: #363636;
+            width: 425px;
+            max-width: 100%;
+            margin: 50px auto 250px;
+            margin-top: 50px;
+            margin-right: auto;
+            margin-bottom: 250px;
+            margin-left: auto;
+            background-color: #efefef;
+            border: 1px solid #d7d7d7;
+            border-top-color: rgb(215, 215, 215);
+            border-top-style: solid;
+            border-top-width: 1px;
+            border-right-color: rgb(215, 215, 215);
+            border-right-style: solid;
+            border-right-width: 1px;
+            border-bottom-color: rgb(215, 215, 215);
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            border-left-color: rgb(215, 215, 215);
+            border-left-style: solid;
+            border-left-width: 1px;
+            border-image-source: initial;
+            border-image-slice: initial;
+            border-image-width: initial;
+            border-image-outset: initial;
+            border-image-repeat: initial;
+            padding: 20px;
+            padding-top: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .LoginBox-formArea {
+            border-top: 1px solid #d7d7d7;
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: rgb(215, 215, 215);
+            width: 100%;
+            padding-top: 20px;
+
+        }
+
+        .LoginBox-headerArea {
+            margin-bottom: 12px;
+        }
+
+        .LoginBox-header {
+            font-size: 30px;
+            color: #363636;
+            display: inline-block;
+            -webkit-margin-before: 0;
+            -webkit-margin-after: 0;
+            padding-right: 12px;
+            border-right: 1px solid #d7d7d7;
+            border-right-width: 1px;
+            border-right-style: solid;
+            border-right-color: rgb(215, 215, 215);
+        }
+
+        .LoginBox-formArea {
+            border-top: 1px solid #d7d7d7;
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: rgb(215, 215, 215);
+            width: 100%;
+            padding-top: 20px;
+
+        }
+
+        .LoginBox-headerArea a {
+            color: #35938b;
+            text-decoration: none;
+            text-decoration-line: none;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+        }
+
+        .LandingPageWork-rank,
+        .LandingPageWork-text h3,
+        a {
+            font-family: Tahoma, Verdana, Segoe, sans-serif;
+            font-weight: 600;
+        }
+
+        .LoginBox {
+            color: #363636;
+        }
+
+        .LoginBox-tab {
+            font-size: 14px;
+            display: inline-block;
+            padding-left: 5px;
+            vertical-align: text-top;
+            cursor: pointer;
+        }
+
+        input[type=text] {
+            font-family: Tahoma, Verdana, Segoe, sans-serif;
+            min-width: 0;
+            -webkit-appearance: none !important;
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            color: inherit;
+            font: inherit;
+            font-style: inherit;
+            font-variant-ligatures: inherit;
+            font-variant-caps: inherit;
+            font-variant-numeric: inherit;
+            font-variant-east-asian: inherit;
+            font-weight: inherit;
+            font-stretch: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            font-family: inherit;
+            margin: 0;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            -webkit-writing-mode: horizontal-tb !important;
+            text-rendering: auto;
+            color: -internal-light-dark-color(black, white);
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-transform: none;
+            text-indent: 0px;
+            text-shadow: none;
+            display: inline-block;
+            text-align: start;
+            -webkit-appearance: textfield;
+            background-color: -internal-light-dark-color(white, black);
+            -webkit-rtl-ordering: logical;
+            cursor: text;
+            margin: 0em;
+            font: 400 13.3333px Arial;
+            padding: 1px 0px;
+            border-width: 2px;
+            border-style: inset;
+            border-color: initial;
+            border-image: initial;
+        }
+
+        .LoginBox-textBox {
+            width: 90%;
+            border: 1px solid #d7d7d7;
+            border-top-color: rgb(215, 215, 215);
+            border-top-style: solid;
+            border-top-width: 1px;
+            border-right-color: rgb(215, 215, 215);
+            border-right-style: solid;
+            border-right-width: 1px;
+            border-bottom-color: rgb(215, 215, 215);
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            border-left-color: rgb(215, 215, 215);
+            border-left-style: solid;
+            border-left-width: 1px;
+            border-image-source: initial;
+            border-image-slice: initial;
+            border-image-width: initial;
+            border-image-outset: initial;
+            border-image-repeat: initial;
+            font-size: 14px;
+            display: block;
+            padding: 12px !important;
+            padding-top: 12px !important;
+            padding-right: 12px !important;
+            padding-bottom: 12px !important;
+            padding-left: 12px !important;
+        }
+
+        .LoginBox-rr>div>.Checkbox {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-justify-content: space-around;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            -webkit-box-align: baseline;
+            -webkit-align-items: baseline;
+            -ms-flex-align: baseline;
+            align-items: baseline;
+        }
+
+        .Checkbox {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+            padding-left: 2rem;
+            display: inline-block;
+        }
+
+        .Checkbox input:checked~.Checkbox-state {
+            background: 0 0;
+            background-image: initial;
+            background-position-x: 0px;
+            background-position-y: 0px;
+            background-size: initial;
+            background-repeat-x: initial;
+            background-repeat-y: initial;
+            background-attachment: initial;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: initial;
+            -webkit-transition: -webkit-transform .35s ease;
+            transition: -webkit-transform .35s ease;
+            transition-property: transform, -webkit-transform;
+            transition-duration: 0.35s, 0.35s;
+            transition-timing-function: ease, ease;
+            transition-delay: 0s, 0s;
+            transition: transform .35s ease;
+            transition-property: transform, -webkit-transform;
+            transition-duration: 0.35s, 0.35s;
+            transition-timing-function: ease, ease;
+            transition-delay: 0s, 0s;
+            transition: transform .35s ease, -webkit-transform .35s ease;
+            transition-property: transform, -webkit-transform;
+            transition-duration: 0.35s, 0.35s;
+            transition-timing-function: ease, ease;
+            transition-delay: 0s, 0s;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            border: 2px solid #35938b;
+            border-top: none;
+            border-top-width: initial;
+            border-top-style: none;
+            border-top-color: initial;
+            border-left: none;
+            border-left-width: initial;
+            border-left-style: none;
+            border-left-color: initial;
+            height: 1.25rem;
+            width: .625rem;
+            margin-left: .25rem;
+            margin-top: -.875rem;
+        }
+
+        .Checkbox-state {
+            position: absolute;
+            top: 50%;
+            width: 1rem;
+            height: 1rem;
+            margin-top: -.5rem;
+            border: 1px solid #ddd;
+            left: 0;
+            background: #fff;
+            background-image: initial;
+            background-position-x: initial;
+            background-position-y: initial;
+            background-size: initial;
+            background-repeat-x: initial;
+            background-repeat-y: initial;
+            background-attachment: initial;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .LoginBox-rr>div {
+            color: #363636;
+            text-align: left;
+            margin-bottom: 6px;
+        }
+
+        .LoginBox-rr {
+            width: 100%;
+            line-height: 18px;
+            margin-bottom: 12px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            font-size: 12px;
+            -webkit-box-align: baseline;
+            -webkit-align-items: baseline;
+            -ms-flex-align: baseline;
+            align-items: baseline;
+        }
+
+        .LoginBox {
+            color: #363636;
+            width: 425px;
+            max-width: 100%;
+            margin: 50px auto 100px;
+            background-color: #efefef;
+            border: 1px solid #d7d7d7;
+            padding: 20px;
+        }
+
+        a {
+            color: #35938b;
+            text-decoration: none;
+        }
+
+        button.Button,
+        input.Button {
+            border: none;
+            border-top-color: initial;
+            border-top-style: none;
+            border-top-width: initial;
+            border-right-color: initial;
+            border-right-style: none;
+            border-right-width: initial;
+            border-bottom-color: initial;
+            border-bottom-style: none;
+            border-bottom-width: initial;
+            border-left-color: initial;
+            border-left-style: none;
+            border-left-width: initial;
+            border-image-source: initial;
+            border-image-slice: initial;
+            border-image-width: initial;
+            border-image-outset: initial;
+            border-image-repeat: initial;
+            outline: 0;
+            outline-color: initial;
+            outline-style: initial;
+            outline-width: 0px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+            background: 0 0;
+            background-image: initial;
+            background-position-x: 0px;
+            background-position-y: 0px;
+            background-size: initial;
+            background-repeat-x: initial;
+            background-repeat-y: initial;
+            background-attachment: initial;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: initial;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            padding: .25rem 1.5rem;
+            padding-top: 0.25rem;
+            padding-right: 1.5rem;
+            padding-bottom: 0.25rem;
+            padding-left: 1.5rem;
+            width: 100%;
+        }
+
+        a.Button,
+        button.Button,
+        input.Button {
+            display: inline-block;
+            position: relative;
+            background: #35938b;
+            background-image: initial;
+            background-position-x: initial;
+            background-position-y: initial;
+            background-size: initial;
+            background-repeat-x: initial;
+            background-repeat-y: initial;
+            background-attachment: initial;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: rgb(53, 147, 139);
+            padding: .75rem 1.5rem;
+            padding-top: 0.75rem;
+            padding-right: 1.5rem;
+            padding-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            text-decoration-line: none;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            font-weight: 600;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            border-bottom-left-radius: 2px;
+            line-height: 1.5;
+        }
+
+        button,
+        html input[type=button],
+        input[type=reset],
+        input[type=submit] {
+            -webkit-appearance: button;
+            cursor: pointer;
+        }
+
+        .btn2 {
+        
+            color: white;
+            padding: 14px;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+            width: 385px;
+            text-align: center;
+            background-color: white;
+            border-radius: 7px;
+            margin-left: 0px;
+        }
+
+        .submit1 {
+            margin: auto;
+            background-color: #35938B;
+            box-sizing: border-box;
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+            border: 0;
+        }
+
+</style>
+
+<body>
+    <header>
+        <div class="container">
+            <div><img src="https://static.thriftbooks.com/images/logo.svg" alt="" class="logo"></div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#"></a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Biographies &amp; Memoirs</a></li>
+                        <li><a href="#">Literature &amp; Fiction</a></li>
+                        <li><a href="#">Mystery &amp; Suspense</a></li>
+                        <li><a href="">Fantasy Magic</a></li>
+                        <li><a href="">Teen Halloween</a></li>
+                        <li><a href="">Religious Fiction</a></li>
+                        <li><a href="">Classics</a></li>
+                        <li><a href="">Dogs</a></li>
+                    </ul>
+                </li>
+                <li><a href="#main2">Authors</a></li>
+                <li><a href="#main3">Movies &amp; TV</a></li>
+                <li><a href="#main1">Book Shop</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" action="/action_page.php">
+                <div class="input-group" style="width:300px">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#sign"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row" style="margin-top: 70px;">
+        <div class="side" style="border-right: 1px solid #d7d7d7;padding-right: 40px;">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="
+            height: 46px;width: 220px;margin-left: 30px; opacity: 0.7">2019 bestseller</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">2019 bestseller</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>1. <a href="#"> Where the Crawdads Sing by Delia Owens—907,192</a></p>
+                            <p>2. <a href="#">Becoming by Michelle Obama—888,611</a></p>
+                            <p>3. <a href="#">Dog Man: Brawl of the Wild by Dav Pilkey—524,849</a></p>
+                            <p>4. <a href="#">Girl, Stop Apologizing by Rachel Hollis—505,809</a></p>
+                            <p>5. <a href="#">Diary of An Awesome Friendly Kid by Jeff Kinney—493,154</a></p>
+                            <p>6. <a href="#">Oh, the Places You'll Go! by Dr. Seuss—483,478</a></p>
+                            <p>7. <a href="#">Educated by Tara Westover—454,989</a></p>
+                            <p>8. <a href="#">The Tattooist of Auschwitz by Heather Morris—365,246</a></p>
+                            <p>9. <a href="#">The Wonky Donkey by Craig Smith—272,182</a></p>
+                            <p>10. <a href="#">Unfreedom of the Press by Mark R. Levin—267,751</a></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="sidemenu" style="width:200px;padding-left: 20px;">
+                <h4>Genres</h4>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">Friend ship
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">Humor
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">School
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">Fantasy
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div class="sidemenu" style="width:200px;padding-left: 20px;">
+                <h4>Formats</h4>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">Hardcover
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">Paperback
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">Mass Market Paperback
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">Board book
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div class="sidemenu" style="width:200px;padding-left: 20px;">
+                <h4>Conditions</h4>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">New
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">Like New
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">Very Good
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">Good
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div class="sidemenu" style="width:200px;padding-left: 20px;">
+                <h4>Languages</h4>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">English
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">Spanish
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">French
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="padding-left: 40px;
+    padding-right: 0px;">Korean
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="main" style="padding-left: 40px;">
+
+            <div id="listMain" style="margin-bottom: 70px;">
+                <div class="container">
+                    <div class="mainimg" style="margin-right: 20px;">
+                        <img src="https://static.thriftbooks.com/general/Awards-DT-L_ab2ca232.jpg" alt="">
+                        <h3>The Book Is Always Better</h3>
+                        <span class="a">Read the inspirations for this year's film awards</span>
+                    </div>
+
+                    <div class="mainimg">
+                        <img src="https://static.thriftbooks.com/general/ReasonableRed-DT-M_fee23ccf.jpg" style="width: 510px" alt="">
+                        <h3>Reasonable Resolutions</h3>
+                        <span class="a">Resolve to make small improvements</span>
+                    </div>
+
+                    <div class="mainimg">
+                        <img src="https://static.thriftbooks.com/general/NewReleases-DT-S_f8761c84.jpg" style="height:130px;margin-top: 10px;" alt="">
+                        <h3>New Releases</h3>
+                        <span class="a">Snatch up the best new reads</span>
+                    </div>
+                    <div class="mainimg" style="float: right;">
+                        <img src="https://static.thriftbooks.com/general/RewardsFallback-DT-S_a04a1d07.jpg" style="height:130px;margin-top: 10px;" alt="">
+                        <h3>Free Book Every 500 Points</h3>
+                        <span class="a">See details and special offers</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="listA" style="border-top: 1px solid #d7d7d7; padding-top: 40px;padding-bottom: 40px;" id="main1">
+                <h1>Books Shop</h1>
+                <div class="container" >
+                    <article>
+                        <a href="#" class="bo">
+                            <div class="photo" style="background-image: url(https://images-na.ssl-images-amazon.com/images/I/51jNORv6nQL._SL260_.jpg)"></div>
+                            <div class="text">
+                                <h3>Harry porter</h3>
+                                <p>J.K.Rowling</p>
+                                <p>from:$3.99</p>
+                                <p><button type="button" class="btn btn-default btn-sm">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+                                    </button></p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="#" class="bo">
+                            <div class="photo" style="background-image: url(https://images-na.ssl-images-amazon.com/images/I/41tzgUUcRJL._SL260_.jpg)"></div>
+                            <div class="text">
+                                <h3>The Hobbit</h3>
+                                <p>J.R.R. Tolkien</p>
+                                <p>from:$4.79</p>
+                                <p><button type="button" class="btn btn-default btn-sm">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+                                    </button></p>
+                            </div>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#" class="bo">
+                            <div class="photo" style="background-image: url(https://images-na.ssl-images-amazon.com/images/I/51aeUv8h6CL._SL260_.jpg)"></div>
+                            <div class="text">
+                                <h3>A Game of Thrones</h3>
+                                <p>George R.R. Martin</p>
+                                <p>from:$4.69</p>
+                                <p><button type="button" class="btn btn-default btn-sm">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+                                    </button></p>
+                            </div>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#" class="bo">
+                            <div class="photo" style="background-image: url(https://images-na.ssl-images-amazon.com/images/I/51JrbSuPc9L._SL260_.jpg)"></div>
+                            <div class="text">
+                                <h3>The Lion, the Witch and the Wardrober</h3>
+                                <p>C.S. Lewis</p>
+                                <p>from:$4.79</p>
+                                <p><button type="button" class="btn btn-default btn-sm">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+                                    </button></p>
+                            </div>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#" class="bo">
+                            <div class="photo" style="background-image: url(https://images-na.ssl-images-amazon.com/images/I/41eiFf1x23L._SL260_.jpg)"></div>
+                            <div class="text">
+                                <h3>The Great Gatsby </h3>
+                                <br>
+                                <p> F. Scott Fitzgerald</p>
+                                <p>from:$107.19</p>
+                                <p><button type="button" class="btn btn-default btn-sm">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+                                    </button></p>
+                            </div>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#" class="bo">
+                            <div class="photo" style="background-image: url(https://images-na.ssl-images-amazon.com/images/I/51ZiUjjsedL._SL260_.jpg)"></div>
+                            <div class="text">
+                                <h3>The Book Thief</h3>
+                                <br>
+                                <p>Markus Zusak</p>
+                                <p>from:$4.69</p>
+                                <p><button type="button" class="btn btn-default btn-sm">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+                                    </button></p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <div class="listB" style="border-top: 1px solid #d7d7d7; padding-top: 40px;padding-bottom: 40px;" id="main2">
+                <h1> Famous Authors</h1>
+                <div class="container" style="padding-top: 20px;">
+                    <article>
+                        <div class="photo1" style="background-image: url(https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555899320/shape/mentalfloss/GettyImages-3163725_0_0.jpg?itok=O8SK4GXo)"></div>
+                        <div class="text">
+                            <h3>1. ERNEST HEMINGWAY</h3>
+                            <p>Papa Hemingway once said "there is no friend as loyal as a book," and in a 1935 piece published in Esquire, he laid out a list of a few friends he said he would "rather read again for the first time ... than have an assured income of a million dollars a year." They included, he wrote, "Anna Karenina, Far Away and Long Ago, Buddenbrooks, Wuthering Heights, Madame Bovary, War and Peace, A Sportsman's Sketches, The Brothers Karamazov, Hail and Farewell, Adventures of Huckleberry Finn, Winesburg, Ohio, La Reine Margot, The Maison Tellier, Le Rouge et le Noir, La Chartreuse de Parme, Dubliners, Yeats's Autobiographies, and a few others."</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="photo1" style="background-image: url(https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555899320/shape/mentalfloss/gettyimages-153392074.jpg?itok=09m3T116)"></div>
+                        <div class="text">
+                            <h3>2. JOAN DIDION</h3>
+                            <p>In an interview with The Paris Review in 2006, novelist and creative nonfiction scribe Joan Didion called Joseph Conrad's Victory "maybe my favorite book in the world ... I have never started a novel ... without rereading Victory. It opens up the possibilities of a novel. It makes it seem worth doing."</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="photo1" style="background-image: url(https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555899319/shape/mentalfloss/gettyimages-2628570.jpg?itok=LxJA4Eg7)"></div>
+                        <div class="text">
+                            <h3>3. RAY BRADBURY</h3>
+                            <p>Sci-fi author Ray Bradbury's favorite books, which he discussed during a 2003 interview with Barnes &amp; Noble when he was 83, are somewhat unexpected. Among them, Bradbury said, were "The collected essays of George Bernard Shaw, which contain all of the intelligence of humanity during the last hundred years and perhaps more," books written by Loren Eisley, "who is our greatest poet/essayist of the last 40 years," and Herman Melville's Moby-Dick: "Quite obviously its impact on my life has lasted for more than 50 years."
+
+                                The books that most influenced his career—and are presumably favorites as well—were those in Edgar Rice Burroughs's John Carter: Warlord of Mars series. "[They] entered my life when I was 10 and caused me to go out on the lawns of summer, put up my hands, and ask for Mars to take me home," Bradbury said. "Within a short time I began to write and have continued that process ever since, all because of Mr. Burroughs."</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="photo1" style="background-image: url(https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555899317/shape/mentalfloss/gettyimages-164018781.jpg?itok=bSj0ov_W)"></div>
+                        <div class="text">
+                            <h3>4. GEORGE R.R. MARTIN</h3>
+                            <p>It's probably not surprising that Game of Thrones author George R.R. Martin has said that J.R.R. Tolkien's The Lord of the Rings, which he first read in junior high, is "still a book I admire vastly." But he recently found inspiration in a newer book, which he recommended in a Live Journal entry: "I won't soon forget Station Eleven," he wrote. Emily St. John Mandel's book about a group of actors in a recently post-apocalyptic society, he said, is "a deeply melancholy novel, but beautifully written, and wonderfully elegiac … a book that I will long remember, and return to."</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="photo1" style="background-image: url(https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555899317/shape/mentalfloss/gettyimages-481527252.jpg?itok=QgRH0cS1)"></div>
+                        <div class="text">
+                            <h3>5. GILLIAN FLYNN</h3>
+                            <p>When Gone Girl author Gillian Flynn was asked about her favorite books in a 2014 Reddit AMA, she called out her "comfort food" books—the kind "you grab when you're feeling cranky and nothing sounds good to read"—which included Agatha Christie's And Then There Were None and Norman Mailer's The Executioner's Song.</p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+
+            <div class="listC" style="border-top: 1px solid #d7d7d7; padding-top: 40px;padding-bottom: 200px;" id="main3">
+                <h1>Movies &amp; TV</h1>
+                <div class="container" style="padding-top: 20px;">
+                    <article>
+                        <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/tlmIrkWPA4s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+                        <div class="text">
+                            <h2 style="margin:0px;">For the Love of Reading</h2>
+                            <h4>Selection</h4>
+                            <p>We have more than 13 million titles to choose from, from the earliest board books to the all-time classics of literature.</p>
+                            <h4>Purchasing Power</h4>
+                            <p>Used books are often treasures that are out-of-print or rare. With Wish Lists you can choose to be notified the instant we find a copy, see how often we find rare titles, and see who else is interested.</p>
+                            <h4>FREE Shipping &amp; More</h4>
+                            <p>When you've found the books you want we'll ship qualifying orders to your door for FREE in 100% recyclable packaging. If there is no demand for a book, we will donate it to charity, or we'll recycle it.</p>
+                        </div>
+
+                    </article>
+                    <article class="reverse">
+                        <div class="video1"><iframe width="560" height="315" src="https://www.youtube.com/embed/xH7dK9ttubM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+                        <div class="text">
+                            <h2 style="margin:0px;">Becoming</h2>
+                            <p>In her memoir, a work of deep reflection and mesmerizing storytelling, Michelle Obama invites readers into her world, chronicling the experiences that have shaped her—from her childhood on the South Side of Chicago to her years as an executive balancing the demands of motherhood and work, to her time spent at the world’s most famous address. With unerring honesty and lively wit, she describes her triumphs and her disappointments, both public and private, telling her full story as she has lived it—in her own words and on her own terms. Warm, wise, and revelatory, Becoming is the deeply personal reckoning of a woman of soul and substance who has steadily defied expectations—and whose story inspires us to do the same.
+                            </p>
+                        </div>
+
+                    </article>
+                    <article>
+                        <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/dCA7IQGhmOo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+                        <div class="text">
+                            <h2 style="margin:0px;">Where the Crawdads Sing</h2>
+                            <p>Where the Crawdads Sing is at once an exquisite ode to the natural world, a heartbreaking coming-of-age story, and a surprising tale of possible murder. Owens reminds us that we are forever shaped by the children we once were, and that we are all subject to the beautiful and violent secrets that nature keeps.</p>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+
+            <div id="login" style="border-top: 1px solid #d7d7d7; padding-top: 100px;padding-bottom: 100px;">
+
+                    <div id="divLogin" class="LoginBox LoginBox--existingUser">
+        <div class="LoginBox-headerArea">
+            <!--            <a class="LoginBox-tabMobile" id="NewAccountLinkMobile">New Account</a>-->
+            <h1 class="LoginBox-header">Login</h1>
+            <a class="LoginBox-tab" id="NewAccountLink" href="#createacount"><b>Create New Account</b></a>
+
+        </div>
+
+        <form action="/account/login/" method="post">
+            <div class="LoginBox-formArea">
+                <div class="LoginBox-textboxArea">
+                    <div class="LoginBox-section">
+                        <div class="ErrorBox" id="emailErrorContainer">
+
+
+
+
+                            <span class="field-validation-error" style="color: #ee1c24!important">The Password field is required.</span> <br>
+
+                        </div>
+                        <input aria-label="Email Address" class="input-validation-error LoginBox-textBox tbjvFloat LoginBox-emailAddressTextbox LoginBox-emailAddressTextbox--existingUser tbpii" id="ExistingAccount_EmailAddress" maxlength="200" name="ExistingAccount.EmailAddress" placeholder="Email Address" type="text" value="">
+                    </div>
+                    <br>
+                    <div class="LoginBox-section">
+                        <input aria-label="Password" class="input-validation-error LoginBox-textBox tbjvFloat tbpii" id="ExistingAccount_Password" name="ExistingAccount.Password" placeholder="Password" type="password">
+                    </div>
+                </div>
+
+                <div class="LoginBox-checkBox-area">
+                    <label class="Checkbox">
+                        <input name="ExistingAccount.RememberMe" type="checkbox" value="false" style="display:none">
+                        <div class="Checkbox-label">
+                            <span class="LoginBox-staySignedInText">Stay signed in</span>
+                            <span class="LoginBox-staySignedInWarning">Not recommended if using a public or shared computer</span>
+                        </div>
+                        <div class="Checkbox-state"></div>
+                    </label>
+                </div>
+
+                <p class="LoginBox-policyText">
+                    By continuing, I agree to the ThriftBooks
+                    <a href="/terms-of-use/" target="_blank">
+                        <b>Terms of Use</b>
+                    </a>
+                    and
+                    <a href="/privacy-policy/" target="_blank"><b>
+                            Privacy Policy</b>
+                    </a>.
+                </p>
+
+                <div class="LoginBox-submitArea">
+
+
+                    <button class="btn1 submit">Login</button>
+
+
+                    <script type="text/javascript">
+                        function showLoadingSpinner(btn1, btnClass) {
+
+                            btn1.style.display = "none";
+
+                            var buttonDivs = document.getElementsByClassName(btnClass);
+
+                            for (var i = 0; i < buttonDivs.length; i++) {
+                                var loadingNode = document.createElement("div");
+                                loadingNode.className = "Loading-spinner";
+                                loadingNode.innerHTML = "<div class='Loading-rect'></div><div class='Loading-rect'></div><div class='Loading-rect'></div><div class='Loading-rect'></div><div class='Loading-rect'></div>";
+                                buttonDivs[i].parentNode.insertBefore(loadingNode, buttonDivs[i].nextSibling);
+
+                                buttonDivs[i].style.display = "none";
+                            }
+
+                            return true;
+                        }
+                    </script>
+
+                    <a href="/account/forgotpassword/" class="LoginBox-forgotPasswordLink" style="display: inline-block"><b>Forgot Password</b></a>
+                </div>
+
+            </div>
+            <input id="ExistingAccount_ReturnUrl" name="ExistingAccount.ReturnUrl" type="hidden" value="https://www.thriftbooks.com/b/biographies-and-memoirs/"><input id="ExistingAccount_WlIsbn" name="ExistingAccount.WlIsbn" type="hidden" value="">
+        </form>
+
+
+            </div>
+</div>
+            <div id="sign" style="border-top: 1px solid #d7d7d7; padding-top: 100px;padding-bottom: 20px;">
+            
+            <form action="http://localhost/member.php" style="">
+                      <div id="divNewUser" class="LoginBox LoginBox--newUser">
+        <div class="LoginBox-headerArea">
+            <h1 class="LoginBox-header">Create New Account</h1>
+            <a class="LoginBox-tab" id="SignInLink">Sign In</a>
+
+        </div>
+
+        <form action="/account/login/" method="post">
+            <div class="LoginBox-formArea">
+                <div class="LoginBox-textboxArea">
+                    <div class="LoginBox-section">
+                        <label class="LoginBox-fallbackLabel u-hidden">
+                            <p></p>
+                        </label>
+
+                        <input aria-label="First Name" class="LoginBox-textBox tbjvFloat tbpii " id="NewAccount_FirstName" maxlength="200" name="NewAccount.FirstName" placeholder="First Name" type="text" value="">
+                    </div>
+
+                    <div class="LoginBox-section">
+                        <label class="LoginBox-fallbackLabel u-hidden">
+                            <p></p>
+                        </label>
+                        <input aria-label="Last Name" class="LoginBox-textBox tbjvFloat tbpii " id="NewAccount_LastName" maxlength="200" name="NewAccount.LastName" placeholder="Last Name" type="text" value="">
+                    </div>
+
+                    <div class="LoginBox-section">
+                        <label class="LoginBox-fallbackLabel u-hidden">
+                            <p></p>
+                        </label>
+                        <input aria-label="Email Address" class="LoginBox-textBox tbjvFloat tbpii " id="NewAccount_EmailAddress" maxlength="200" name="NewAccount.EmailAddress" placeholder="Email Address" type="text" value="">
+
+                    </div>
+
+                    <div class="LoginBox-section">
+                        <label class="LoginBox-fallbackLabel u-hidden">
+                            <p></p>
+                        </label>
+                        <input aria-label="Confirm Email" class="LoginBox-textBox tbjvFloat tbpii " id="NewAccount_ConfirmEmail" maxlength="200" name="NewAccount.ConfirmEmail" placeholder="Confirm Email" type="text" value="">
+                    </div>
+
+                    <div class="LoginBox-section">
+                        <label class="LoginBox-fallbackLabel u-hidden">
+                            <p></p>
+                        </label>
+                        <input aria-label="Password" class="LoginBox-textBox tbjvFloat tbpii " id="NewAccount_Password" name="NewAccount.Password" placeholder="Password" type="password">
+                    </div>
+
+                    <div class="LoginBox-section">
+                        <label class="LoginBox-fallbackLabel u-hidden">
+                            <p></p>
+                        </label>
+                        <input aria-label="Confirm Password" class="LoginBox-textBox tbjvFloat tbpii " id="NewAccount_ConfirmPassword" name="NewAccount.ConfirmPassword" placeholder="Confirm Password" type="password">
+                    </div>
+                </div>
+
+                <div class="LoginBox-submitArea">
+                    <div class="LoginBox-rr">
+                        <div>
+                            <label class="Checkbox">
+                                <input checked="checked" id="NewAccount_JoinReadingRewards" name="NewAccount.JoinReadingRewards" type="checkbox" value="true" style="display: none"><input name="NewAccount.JoinReadingRewards" type="hidden" value="false" style="display: none">
+                                <p class="Checkbox-Textlabel">Sign up for <a href="/readingrewards/">ReadingRewards</a>: Earn a FREE BOOK every 500 points.</p>
+                                <div class="Checkbox-state"></div>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="Checkbox">
+                                <input checked="checked" id="NewAccount_ReceiveOffers" name="NewAccount.ReceiveOffers" type="checkbox" value="true" style="display: none">
+                                <input name="NewAccount.ReceiveOffers" type="hidden" value="false">
+                                <p class="Checkbox-Textlabel">Send me ThriftBooks special offers and exclusive deals.</p>
+                                <div class="Checkbox-state"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <p class="LoginBox-policyText">
+                        By continuing, I agree to the ThriftBooks
+                        <a href="/terms-of-use/" target="_blank">
+                            Terms of Use
+                        </a>
+                        and
+                        <a href="/privacy-policy/" target="_blank">
+                            Privacy Policy
+                        </a>.
+                    </p>
+
+                    <div>
+
+                        <div class="Button-container LoginBox-submitButton Button LoginBox-submitButton--newUser LoginBox-wideButton">
+                            <input type="submit" class="btn2 submit1" value="Create Account" onclick="return showLoadingSpinner(this, 'Button-container LoginBox-submitButton Button LoginBox-submitButton--newUser LoginBox-wideButton')">
+                        </div>
+
+                        <script type="text/javascript">
+                            function showLoadingSpinner(btn, btnClass) {
+
+                                btn.style.display = "none";
+
+                                var buttonDivs = document.getElementsByClassName(btnClass);
+
+                                for (var i = 0; i < buttonDivs.length; i++) {
+                                    var loadingNode = document.createElement("div");
+                                    loadingNode.className = "Loading-spinner";
+                                    loadingNode.innerHTML = "<div class='Loading-rect'></div><div class='Loading-rect'></div><div class='Loading-rect'></div><div class='Loading-rect'></div><div class='Loading-rect'></div>";
+                                    buttonDivs[i].parentNode.insertBefore(loadingNode, buttonDivs[i].nextSibling);
+
+                                    buttonDivs[i].style.display = "none";
+                                }
+
+                                return true;
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="CreatingAccount" value="true">
+            <input id="NewAccount_ReturnUrl" name="NewAccount.ReturnUrl" type="hidden" value="https://www.thriftbooks.com/b/biographies-and-memoirs/"><input id="NewAccount_WlIsbn" name="NewAccount.WlIsbn" type="hidden" value="">
+        </form>
+    </div>
+ 
+                       
+                       
+                       
+                 
+        </form>
+                
+                
+                </div>
+            </div>
+        
+    </div>
+    <footer>
+        <nav class="footB">
+            <div>
+                <h3>Get to know us</h3>
+                <ul>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Inverstor</a></li>
+                </ul>
+
+            </div>
+            <div>
+                <h3>Make Money with Us</h3>
+                <ul>
+                    <li><a href="">Become an Affiliate</a></li>
+                    <li><a href="">Advertise Your Products</a></li>
+                    <li><a href="">Self-Publish with Us</a></li>
+                    <li><a href="">see More</a></li>
+                </ul>
+
+            </div>
+            <div>
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="">Your Account</a></li>
+                    <li><a href="">Your Orders</a></li>
+                    <li><a href="">Shipping Rates &amp; Pllicies</a></li>
+                    <li><a href="">Mange your Cntent and Devices</a></li>
+                </ul>
+
+            </div>
+        </nav>
+        <div class="footC">
+            &copy; Thrift books corp. Conditions of UsePrivacy NoticeInterest-Based Ads
+        </div>
+
+        <div class="Colophon Content">
+            <div class="Colophon-content">
+                <div>
+                    <span>Copyright © 2020 Thriftbooks.com</span>
+                    <a href="http://127.0.0.1:64352/terms-of-use/">Terms of Use</a> |
+                    <a href="http://127.0.0.1:64352/privacy-policy/">Privacy Policy</a> |
+                    <a href="http://127.0.0.1:64352/s/accessibility-statement/">Accessibility Statement</a> <br><span>ThriftBooks<sup>®</sup> and the ThriftBooks<sup>®</sup> logo are registered trademarks of Thrift Books Global, LLC</span></div>
+                <img src="https://static.thriftbooks.com/images/goDaddy.gif" alt="GoDaddy Verified and Secured">
+            </div>
+        </div>
+        
+    </footer>
+    
+</body>
+
+</html>
